@@ -1,0 +1,398 @@
+/* CSS Reset */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* CSS Variables */
+:root{
+    --navbar-height: 59px;
+}
+
+/* Navigation Bar */
+#navbar{
+    display: flex;
+    align-items: center;
+    /* position: sticky; */
+    top: 0px;
+}
+
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    top:0px;
+    left:0px;
+    height: 100%;
+    width:100%;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+/* Navigation Bar: Logo and Image */
+#logo{
+    margin: 10px 34px;
+}
+
+#logo img{
+    height: 100px;
+    margin: 5px 2px;
+    border-radius: 25px;
+    padding: 5px;
+}
+
+
+/* Navigation Bar: List Styling */
+
+#navbar ul{
+    display: flex;
+    
+}
+
+#navbar ul li{ 
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+#navbar ul li a{
+    color: rgb(131, 126, 126);
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-shadow: -1px 2px 3px black;
+    text-decoration: none;
+}
+
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
+}
+
+/* -------------------------------------------------Home Section---------------------------------- */
+#home{
+    display: flex;
+    flex-direction: column;
+    padding:3px 200px;
+    height: 550px;
+    justify-content: center;
+    align-items: center;
+}
+
+#home::before{ 
+    content: "";
+    position: absolute;
+    background: url('../salad.webp') no-repeat center center/cover;
+    height: 642px;
+    top:0px;
+    left:0px;
+    width: 100%;
+    z-index: -1;
+    opacity:0.75;
+}
+
+#home h1{
+    color:white;
+    text-shadow: -3px 6px 5px black;
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+}
+
+#home p{
+    color:white;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Bree Serif', serif;
+}
+/* ------------------------------------------Services Section----------------------------------------------*/
+#services{
+    margin: 34px;
+    display: flex;
+}
+#services .box{ 
+    border: 2px solid brown;
+    padding: 34px;
+    margin: 2px 55px;
+    border-radius: 28px;
+    background: #f2f2f2;
+    margin-bottom: 20px;
+}
+
+#services .box img{ 
+   height: 160px;
+   margin: auto;
+   display: block;
+}
+
+#services .box p{
+    font-family: 'Bree Serif', serif;
+
+} 
+
+/* --------------------------------------Clients Section------------------------------ */
+#client-section{ 
+    position: relative;
+    animation: animate_img 3s linear infinite;
+}
+
+#client-section::before{
+ content: "";
+ position: absolute;
+ background-color: rgb(19, 250, 250);
+ width: 100%;
+ height: 100%;
+ z-index: -1;
+ opacity: 0.1;
+ animation: animate_img 3s linear infinite;
+}
+
+#clients{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: animate_img 3s linear infinite;
+}
+
+.client-item{
+    padding: 20px;
+    animation: animate_img 3s linear infinite;
+}
+
+#clients img{
+    height: 150px;
+    border-radius: 20px;
+    animation: animate_img 3s linear infinite;
+}
+
+
+
+/* -------------------------------------------Utility Classes--------------------------------------- */
+.h-primary{
+    font-family: 'Bree Serif', serif;
+    font-size: 3.8rem;
+    color: rgb(9, 9, 9);
+    padding: 12px;
+    text-shadow: -2px 4px 6px rgb(147, 142, 142);
+}
+
+.h-secondary{
+    font-family: 'Bree Serif', serif;
+    font-size: 2.3rem;
+    padding: 12px;
+}
+
+.center{
+    text-align: center;
+    
+}
+/*--------------contact us-----------------*/
+#contact{
+    position: relative;
+    
+}
+
+#contact::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.4;
+    background: url('../contact.jpg') no-repeat center center/cover;
+
+}
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 84px;
+    padding: 50px;
+}
+#contact-box input, 
+#contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    font-size: 1.1rem;
+} 
+
+#contact-box form{
+    width: 37%;
+}
+
+#contact-box label{
+   font-size: 1.3rem;
+   font-family: 'Bree Serif', serif;
+
+}
+
+
+
+/*---------------------------------------------Contact Us------------------------------------- */
+
+.btn{
+    padding: 6px 20px;
+    border: 2px solid white;
+    background-color: brown;
+    color: white;
+    margin: 17px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    position: relative;
+    left: 40%;
+    cursor:pointer;
+    margin: 5px;;
+}
+
+/*---------------------------------Footer---------------------------------------------------------------*/
+
+
+footer
+{
+    position: relative;
+    width: 93%;
+    margin-top: 10%;
+    background: #3586ff;
+    min-height: 20px;
+    padding: 10px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+}
+
+footer .icons,
+footer .menu
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+    font-family: 'Poppins', sans-serif;
+}
+
+footer .icons li,
+footer .menu li 
+{
+    list-style: none;
+}
+
+footer .icons li a
+{
+    font-size: 2em;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+    font-family: 'Poppins', sans-serif;
+}
+
+footer .icons li a:hover
+{
+    transform: translateY(-10px);
+}
+
+footer .menu li a
+{
+    font-size: 1.2em;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    opacity: 0.75;
+}
+
+footer .menu li a:hover
+{
+    opacity: 1;
+}
+
+footer p
+{
+    color: #fff;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    font-family: 'Poppins', sans-serif;
+}
+
+footer .wave
+{
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(../wave.png);
+    background-size: 1000px 100px ;
+}
+
+footer .wave#wave1
+{
+    z-index: 1000;
+    opacity: 1;
+    bottom: 0;
+    animation: animatewave 2s linear infinite;
+
+}
+
+footer .wave#wave2
+{
+    z-index: 999;
+    opacity: 0.5;
+    bottom: 10px;
+    animation: animatewave_02 4s linear infinite;
+
+}
+
+footer .wave#wave3
+{
+    z-index: 1000;
+    opacity: 0.2;
+    bottom: 15px;
+    animation: animatewave 3s linear infinite;
+
+}
+
+footer .wave#wave4
+{
+    z-index: 999;
+    opacity: 0.7;
+    bottom: 20px;
+    animation: animatewave_02 3s linear infinite;
+
+}
+
+@keyframes animatewave
+{
+    0%
+    {
+        background-position-x: 1000px;
+    }
+    100%
+    {
+        background-position-x: 0px;
+    }
+}
+@keyframes animatewave_02
+{
+    0%
+    {
+        background-position-x: 1000px;
+    }
+    100%
+    {
+        background-position-x: 0px;
+    }
+}
+/* ---------------------------------login form------------------------------------------ */

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Login Form </title>
+    <link rel="stylesheet" href="css/s1.css">
+  </head>
+  <body>
+    <div class="center">
+      <h1>Signup</h1>
+      <form method="post" action="signup.php">
+        <div class="txt_field">
+          <input type="text" required name="uname">
+          <span></span>
+          <label>Username</label>
+        </div>
+        <div class="txt_field">
+            <input type="text" required name="email">
+            <span></span>
+            <label>email</label>
+          </div>
+        <div class="txt_field">
+          <input type="password" required name="pass">
+          <span></span>
+          <label>Password</label>
+        </div>
+        
+        <input type="submit" value="Signup" name="signup">
+        <div class="signup_link">
+         Already a member? <a href="login.html">Login</a> 
+        </div>
+      </form>
+    </div>
+
+  </body>
+</html>
